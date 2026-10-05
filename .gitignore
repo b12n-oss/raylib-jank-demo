@@ -1,0 +1,25 @@
+# Build output: the shared native/compile cache at the root, and any per-demo
+# target lein-jank leaves behind
+target/
+*/target/
+pom.xml
+a.out
+.nrepl-port
+.jank-repl-history
+
+# Written by the storage-values and automation-events demos at runtime
+storage.data
+automation.rae
+
+# clj-kondo's analysis cache (the config beside it is tracked)
+.clj-kondo/.cache/
+
+# docs-engine build output and a local engine checkout
+_site/
+.docs-engine/
+
+# screen-grab teardown markers (out-dir scratch; recover-pending! executes these)
+docs/demos/.screen-grab-pending.edn*
+
+.remember/
+.DS_Store

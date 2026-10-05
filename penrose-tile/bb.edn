@@ -1,0 +1,14 @@
+;; Run this demo from here with `bb run`. From the repo root it's `bb penrose-tile`.
+;; JANK=/path/to/jank picks the compiler; LEIN=/path/to/lein picks lein.
+{:tasks
+ {:requires ([babashka.fs :as fs])
+  run {:doc "\u25b6 A Penrose tiling grown with an L-system"
+       :override-builtin true
+       :task (let [lein (or (System/getenv "LEIN")
+                            (first (filter fs/exists? ["/usr/local/bin/lein" "/opt/homebrew/bin/lein"]))
+                            "lein")
+                   jank-dir (some-> (System/getenv "JANK") fs/parent str)
+                   env (cond-> {} jank-dir (assoc "PATH" (str jank-dir ":" (System/getenv "PATH"))))
+                   ;; No bwrap on macOS, so the native build runs unsandboxed.
+                   {:keys [exit]} (shell {:continue true :extra-env env} lein "run" "--disable-sandbox")]
+               (when-not (zero? exit) (System/exit exit)))}}}

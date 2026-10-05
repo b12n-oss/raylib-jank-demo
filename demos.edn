@@ -1,0 +1,216 @@
+;; Every demo: its directory name (also its bb task), category, a one-line
+;; description, its controls, and the raylib C example it ports (nil for
+;; originals). Edited by hand; after a change run `bb gen`.
+[{:name "amp-envelope", :category "audio", :desc "An ADSR envelope on a tone, with a live shape graph", :controls "hold SPACE play, Q/A W/S E/D R/F params, ESC", :ported "examples/audio/audio_amp_envelope.c"}
+ {:name "animation-blend-custom", :category "models", :desc "Per-bone blending: walking legs + attacking upper body", :controls "SPACE toggle blend mode, ESC", :ported "examples/models/models_animation_blend_custom.c"}
+ {:name "animation-blending", :category "models", :desc "SPACE cross-fades the robot between two animations", :controls "SPACE blend, LEFT/RIGHT + UP/DOWN anims, Z/X + N/M speeds, P, ESC", :ported "examples/models/models_animation_blending.c"}
+ {:name "animation-timing", :category "models", :desc "The robot with a playback timeline + adjustable speed", :controls "LEFT/RIGHT anim, UP/DOWN speed, P pause, ESC", :ported "examples/models/models_animation_timing.c"}
+ {:name "ascii-rendering", :category "shaders", :desc "A shader re-rendering the scene as ASCII glyphs", :controls "LEFT/RIGHT cell size, ESC", :ported "examples/shaders/shaders_ascii_rendering.c"}
+ {:name "automation-events", :category "core", :desc "A platformer recording and replaying its own input", :controls "LEFT/RIGHT move, SPACE jump, R reset, S record, A replay, ESC", :ported "examples/core/core_automation_events.c"}
+ {:name "background-scrolling", :category "textures", :desc "Parallax-scrolling cyberpunk street layers", :controls "Q quit", :ported "examples/textures/textures_background_scrolling.c"}
+ {:name "ball-physics", :category "shapes", :desc "Grab and throw balls under gravity", :controls "drag \u00b7 RIGHT spawn \u00b7 WHEEL gravity \u00b7 MIDDLE shake \u00b7 Q", :ported "examples/shapes/shapes_ball_physics.c"}
+ {:name "basic-lighting", :category "shaders", :desc "A plane + cube lit by four toggleable colored point lights", :controls "Y/R/G/B toggle lights, ESC", :ported "examples/shaders/shaders_basic_lighting.c"}
+ {:name "basic-pbr", :category "shaders", :desc "The rusty car under physically-based rendering (PBR maps)", :controls "1-4 toggle lights, ESC", :ported "examples/shaders/shaders_basic_pbr.c"}
+ {:name "basic-screen-manager", :category "core", :desc "A LOGO/TITLE/GAMEPLAY/ENDING flow", :controls "ENTER advance \u00b7 Q quit", :ported "examples/core/core_basic_screen_manager.c"}
+ {:name "basic-shapes", :category "shapes", :desc "A gallery of raylib's basic shapes", :controls "Q quit", :ported "examples/shapes/shapes_basic_shapes.c"}
+ {:name "basic-voxel", :category "models", :desc "An 8x8x8 voxel grid; click to ray-pick and remove", :controls "LEFT/RIGHT spin, click remove, R refill, ESC", :ported "examples/models/models_basic_voxel.c"}
+ {:name "basic-window", :category "core", :desc "The minimal raylib window + text", :controls "Q quit", :ported "examples/core/core_basic_window.c"}
+ {:name "billboard-rendering", :category "models", :desc "Camera-facing billboards + an orbiting camera", :controls "watch \u00b7 Q quit", :ported "examples/models/models_billboard_rendering.c"}
+ {:name "blend-modes", :category "textures", :desc "Four 2D blend modes over the cyberpunk street", :controls "SPACE mode \u00b7 Q quit", :ported "examples/textures/textures_blend_modes.c"}
+ {:name "bone-socket", :category "models", :desc "A hat, sword and shield riding the greenman's bones", :controls "T/G anim, F/H rotate, 1/2/3 equip, ESC", :ported "examples/models/models_bone_socket.c"}
+ {:name "bouncing-ball", :category "shapes", :desc "A ball bouncing with optional gravity", :controls "SPACE pause \u00b7 G gravity \u00b7 Q quit", :ported "examples/shapes/shapes_bouncing_ball.c"}
+ {:name "box-collisions", :category "models", :desc "A player cube colliding with 3D obstacles", :controls "ARROWS move \u00b7 Q quit", :ported "examples/models/models_box_collisions.c"}
+ {:name "bullet-hell", :category "shapes", :desc "A magic circle spraying bullet spirals", :controls "L/R rows \u00b7 U/D speed \u00b7 Z/X cooldown \u00b7 SPACE angle \u00b7 ENTER method \u00b7 C clear \u00b7 Q", :ported "examples/shapes/shapes_bullet_hell.c"}
+ {:name "bunnymark", :category "textures", :desc "The classic bunny-spawning batching benchmark", :controls "LEFT spawn \u00b7 P pause \u00b7 Q quit", :ported "examples/textures/textures_bunnymark.c"}
+ {:name "camera-2d", :category "core", :desc "A free 2D camera over a skyline", :controls "arrows move \u00b7 WHEEL zoom \u00b7 A/S rotate \u00b7 R reset \u00b7 Q", :ported "examples/core/core_2d_camera.c"}
+ {:name "camera-2d-mouse-zoom", :category "core", :desc "Pan + zoom-to-cursor a 2D camera", :controls "1/2 mode \u00b7 LEFT drag \u00b7 WHEEL/RIGHT zoom \u00b7 Q", :ported "examples/core/core_2d_camera_mouse_zoom.c"}
+ {:name "camera-2d-platformer", :category "core", :desc "A platformer with 5 camera-follow modes", :controls "LEFT/RIGHT move \u00b7 SPACE jump \u00b7 WHEEL zoom \u00b7 C camera \u00b7 R reset \u00b7 Q quit", :ported "examples/core/core_2d_camera_platformer.c"}
+ {:name "camera-2d-split-screen", :category "core", :desc "Two players, two cameras, split screen", :controls "W/S/A/D player 1 \u00b7 ARROWS player 2 \u00b7 Q quit", :ported "examples/core/core_2d_camera_split_screen.c"}
+ {:name "camera-3d", :category "core", :desc "A red cube on a grid through a fixed 3D camera", :controls "watch \u00b7 Q quit", :ported "examples/core/core_3d_camera_mode.c"}
+ {:name "camera-3d-first-person", :category "core", :desc "Walk a yard of random columns in first person", :controls "WASD + mouse, 1-4 camera mode, P projection, ESC", :ported "examples/core/core_3d_camera_first_person.c"}
+ {:name "camera-3d-fps", :category "core", :desc "A physics FPS controller with head-bob and lean", :controls "WASD move, SPACE jump, Left-Ctrl crouch, mouse look, ESC", :ported "examples/core/core_3d_camera_fps.c"}
+ {:name "camera-3d-free", :category "core", :desc "A free-look 3D camera around a cube", :controls "mouse look, WHEEL zoom, wheel-press pan, Z retarget, ESC", :ported "examples/core/core_3d_camera_free.c"}
+ {:name "camera-3d-split-screen", :category "core", :desc "Two players, two 3D cameras, split screen", :controls "W/S player 1, UP/DOWN player 2, ESC", :ported "examples/core/core_3d_camera_split_screen.c"}
+ {:name "cel-shading", :category "shaders", :desc "A GLB car toon-shaded with quantized bands + outline", :controls "Z cel, C outline, Q/E bands, ESC", :ported "examples/shaders/shaders_cel_shading.c"}
+ {:name "cellular-automata", :category "textures", :desc "Wolfram rule cellular automaton, editable rule", :controls "click rule bits / presets \u00b7 Q quit", :ported "examples/textures/textures_cellular_automata.c"}
+ {:name "circle-sector-drawing", :category "shapes", :desc "A circle sector with adjustable angles", :controls "L/R + U/D angles \u00b7 A/S radius \u00b7 O/P segments \u00b7 Q quit", :ported "examples/shapes/shapes_circle_sector_drawing.c"}
+ {:name "clipboard-image", :category "textures", :desc "Paste images from the system clipboard", :controls "CTRL+V paste, R reset, Q", :ported "examples/textures/textures_clipboard_image.c"}
+ {:name "clipboard-text", :category "core", :desc "Type + cut/copy/paste with the system clipboard", :controls "type, CTRL+X/C/V/R/D, ESC", :ported "examples/core/core_clipboard_text.c"}
+ {:name "clock-of-clocks", :category "shapes", :desc "Digits drawn from grids of little clocks", :controls "SPACE 12/24h \u00b7 Q quit", :ported "examples/shapes/shapes_clock_of_clocks.c"}
+ {:name "codepoints-loading", :category "text", :desc "Japanese text rasterized to a minimal TTF font atlas", :controls "SPACE toggle atlas view, ESC", :ported "examples/text/text_codepoints_loading.c"}
+ {:name "collision-area", :category "shapes", :desc "AABB collision between a bouncing + mouse box", :controls "mouse \u00b7 SPACE pause \u00b7 Q", :ported "examples/shapes/shapes_collision_area.c"}
+ {:name "color-correction", :category "shaders", :desc "A shader tuning contrast/saturation/brightness", :controls "1-4 picture, Q/W A/S Z/X sliders, R reset, ESC", :ported "examples/shaders/shaders_color_correction.c"}
+ {:name "colors-palette", :category "shapes", :desc "Every named raylib color in a grid", :controls "mouse hover \u00b7 SPACE all names \u00b7 Q", :ported "examples/shapes/shapes_colors_palette.c"}
+ {:name "compute-hash", :category "core", :desc "CRC32/MD5/SHA1/SHA256 + Base64 of typed text", :controls "type, BACKSPACE delete, ENTER compute, ESC", :ported "examples/core/core_compute_hash.c"}
+ {:name "cubicmap-rendering", :category "models", :desc "A cube maze generated from a tiny black-and-white image", :controls "P pause orbit, ESC", :ported "examples/models/models_cubicmap_rendering.c"}
+ {:name "custom-logging", :category "core", :desc "A trace-log callback timestamps every raylib line", :controls "watch the console, ESC", :ported "examples/core/core_custom_logging.c"}
+ {:name "custom-uniform", :category "shaders", :desc "A mouse-steered swirl over a render-textured scene", :controls "move the mouse, ESC", :ported "examples/shaders/shaders_custom_uniform.c"}
+ {:name "dashed-line", :category "shapes", :desc "A dashed line follows the mouse", :controls "ARROWS size \u00b7 C color \u00b7 Q quit", :ported "examples/shapes/shapes_dashed_line.c"}
+ {:name "decals", :category "models", :desc "Click to splat logo decals onto a character's surface", :controls "CLICK splat, RMB-hold camera, H model, C clear, ESC", :ported "examples/models/models_decals.c"}
+ {:name "deferred-rendering", :category "shaders", :desc "A three-target G-buffer + deferred lighting pass", :controls "Y/R/G/B lights, 1-4 views, ESC", :ported "examples/shaders/shaders_deferred_rendering.c"}
+ {:name "delta-time", :category "core", :desc "Delta-time vs per-frame movement", :controls "WHEEL fps \u00b7 R reset \u00b7 Q", :ported "examples/core/core_delta_time.c"}
+ {:name "depth-rendering", :category "shaders", :desc "The scene's depth buffer visualized through a shader", :controls "WASD + mouse look, Z retarget, ESC", :ported "examples/shaders/shaders_depth_rendering.c"}
+ {:name "depth-writing", :category "shaders", :desc "Inverted gl_FragDepth into a custom depth texture", :controls "ESC", :ported "examples/shaders/shaders_depth_writing.c"}
+ {:name "digital-clock", :category "shapes", :desc "A live clock (digital + analogue modes)", :controls "SPACE mode \u00b7 Q quit", :ported "examples/shapes/shapes_digital_clock.c"}
+ {:name "directional-billboard", :category "models", :desc "A sprite-sheet billboard that turns as the camera orbits", :controls "ESC", :ported "examples/models/models_directional_billboard.c"}
+ {:name "directory-files", :category "core", :desc "A keyboard file browser over the working directory", :controls "UP/DOWN select, ENTER open dir, BACKSPACE up, ESC", :ported "examples/core/core_directory_files.c"}
+ {:name "double-pendulum", :category "shapes", :desc "Chaotic double-pendulum motion + trail", :controls "Q quit", :ported "examples/shapes/shapes_double_pendulum.c"}
+ {:name "drop-files", :category "core", :desc "Drag files onto the window to list their paths", :controls "drag & drop files, ESC", :ported "examples/core/core_drop_files.c"}
+ {:name "easings-ball", :category "shapes", :desc "A ball animated through easing stages", :controls "ENTER replay \u00b7 R restart \u00b7 Q quit", :ported "examples/shapes/shapes_easings_ball.c"}
+ {:name "easings-box", :category "shapes", :desc "A box animated through five easing stages", :controls "SPACE reset \u00b7 Q quit", :ported "examples/shapes/shapes_easings_box.c"}
+ {:name "easings-rectangles", :category "shapes", :desc "A grid shrinks and spins via easing fns", :controls "SPACE replay \u00b7 Q quit", :ported "examples/shapes/shapes_easings_rectangles.c"}
+ {:name "easings-testbed", :category "shapes", :desc "An interactive testbed for all 28 easings", :controls "ENTER play/pause \u00b7 SPACE restart \u00b7 L/R x-ease \u00b7 U/D y-ease \u00b7 Q/W A/S duration \u00b7 T bounded \u00b7 ESC quit", :ported "examples/shapes/shapes_easings_testbed.c"}
+ {:name "ellipse-collision", :category "shapes", :desc "Overlap test between two ellipses", :controls "mouse \u00b7 A/B switch \u00b7 Q quit", :ported "examples/shapes/shapes_ellipse_collision.c"}
+ {:name "embedded-files", :category "others", :desc "A logo and a sound compiled into the binary as C arrays", :controls "SPACE plays the sound, Q", :ported "examples/others/embedded_files_loading.c"}
+ {:name "eratosthenes-sieve", :category "shaders", :desc "The Sieve of Eratosthenes per-pixel in a shader", :controls "ESC", :ported "examples/shaders/shaders_eratosthenes_sieve.c"}
+ {:name "first-person-maze", :category "models", :desc "Walk a cubicmap maze in first person, with a radar", :controls "WASD + mouse look, ESC", :ported "examples/models/models_first_person_maze.c"}
+ {:name "fog-of-war", :category "textures", :desc "A tile map hidden by smooth fog of war", :controls "ARROWS move \u00b7 Q quit", :ported "examples/textures/textures_fog_of_war.c"}
+ {:name "fog-rendering", :category "shaders", :desc "Torus/cube/sphere models fading into exponential fog", :controls "UP/DOWN fog density, ESC", :ported "examples/shaders/shaders_fog_rendering.c"}
+ {:name "following-eyes", :category "shapes", :desc "Two eyes track the mouse cursor", :controls "move the mouse \u00b7 Q quit", :ported "examples/shapes/shapes_following_eyes.c"}
+ {:name "font-filters", :category "text", :desc "Scale a TTF word, switch texture filters", :controls "WHEEL size \u00b7 1/2/3 filter \u00b7 L/R move \u00b7 Q", :ported "examples/text/text_font_filters.c"}
+ {:name "font-loading", :category "text", :desc "Load a BMFont and a TTF font (DrawTextEx)", :controls "SPACE = TTF \u00b7 Q quit", :ported "examples/text/text_font_loading.c"}
+ {:name "font-sdf", :category "text", :desc "Bitmap vs SDF font scaling, the SDF drawn through a shader", :controls "MOUSE WHEEL scale, hold SPACE for SDF, ESC", :ported "examples/text/text_font_sdf.c"}
+ {:name "font-spritefont", :category "text", :desc "Three colored sprite fonts from PNG atlases", :controls "watch \u00b7 Q quit", :ported "examples/text/text_font_spritefont.c"}
+ {:name "format-text", :category "text", :desc "Zero-padded score/time text readouts", :controls "Q quit", :ported "examples/text/text_format_text.c"}
+ {:name "framebuffer-rendering", :category "textures", :desc "An observer camera watching a subject camera + frustum", :controls "WASD + mouse observer, R retarget, ESC", :ported "examples/textures/textures_framebuffer_rendering.c"}
+ {:name "game-of-life", :category "shaders", :desc "Conway's Life on a 2048x2048 world: pan/zoom, presets", :controls "1-9/0 presets, R/P/D mode, Z/X zoom, F/S speed, drag pan, ESC", :ported "examples/shaders/shaders_game_of_life.c"}
+ {:name "geometric-shapes", :category "models", :desc "3D cubes/spheres/cylinders/capsules on a grid", :controls "Q quit", :ported "examples/models/models_geometric_shapes.c"}
+ {:name "gif-player", :category "textures", :desc "An animated GIF streamed frame-by-frame to a texture", :controls "RIGHT/LEFT change speed \u00b7 Q", :ported "examples/textures/textures_gif_player.c"}
+ {:name "heightmap-rendering", :category "models", :desc "Terrain generated from a grayscale heightmap image", :controls "ESC", :ported "examples/models/models_heightmap_rendering.c"}
+ {:name "highdpi-demo", :category "core", :desc "Logical-points vs physical-pixels grids with live DPI scale", :controls "resize window \u00b7 N next monitor \u00b7 ESC", :ported "examples/core/core_highdpi_demo.c"}
+ {:name "highdpi-testbed", :category "core", :desc "A HighDPI overlay: grid, monitor/DPI info, crosshair", :controls "SPACE borderless \u00b7 F fullscreen \u00b7 ESC", :ported "examples/core/core_highdpi_testbed.c"}
+ {:name "hilbert-curve", :category "shapes", :desc "A rainbow Hilbert space-filling curve", :controls "Z/X order \u00b7 U/D size \u00b7 L/R thickness \u00b7 A animate \u00b7 R redraw \u00b7 Q", :ported "examples/shapes/shapes_hilbert_curve.c"}
+ {:name "hot-reloading", :category "shaders", :desc "Hot-swap the reload.fs fragment shader while it runs", :controls "A auto-reload, CLICK reload once, ESC", :ported "examples/shaders/shaders_hot_reloading.c"}
+ {:name "hybrid-rendering", :category "shaders", :desc "Raymarched spheres + rasterized cubes, depth-tested", :controls "ESC", :ported "examples/shaders/shaders_hybrid_rendering.c"}
+ {:name "image-channel", :category "textures", :desc "RGBA channels split + alpha-masked", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_image_channel.c"}
+ {:name "image-drawing", :category "textures", :desc "One texture composed from several CPU images", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_image_drawing.c"}
+ {:name "image-generation", :category "textures", :desc "Nine procedural textures (gradients/noise)", :controls "LEFT mouse / RIGHT arrow cycle \u00b7 Q quit", :ported "examples/textures/textures_image_generation.c"}
+ {:name "image-kernel", :category "textures", :desc "Sharpen/sobel/gaussian convolution kernels", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_image_kernel.c"}
+ {:name "image-loading", :category "textures", :desc "LoadImage (RAM) then LoadTextureFromImage (VRAM)", :controls "Q quit", :ported "examples/textures/textures_image_loading.c"}
+ {:name "image-processing", :category "textures", :desc "Nine CPU image filters via pointer-taking Image* APIs", :controls "click / UP / DOWN \u00b7 Q quit", :ported "examples/textures/textures_image_processing.c"}
+ {:name "image-rotate", :category "textures", :desc "The logo rotated +45/+90/-90 in CPU memory", :controls "LEFT click / RIGHT cycle \u00b7 Q quit", :ported "examples/textures/textures_image_rotate.c"}
+ {:name "image-text", :category "textures", :desc "Text baked into an image with a TTF font", :controls "SPACE = atlas \u00b7 Q quit", :ported "examples/textures/textures_image_text.c"}
+ {:name "inline-styling", :category "text", :desc "Text with inline color style tags", :controls "watch the colors re-roll, ESC", :ported "examples/text/text_inline_styling.c"}
+ {:name "input-actions", :category "core", :desc "Remappable abstract actions (WASD/arrows) via a keyset map", :controls "WASD/arrows move \u00b7 SPACE fire \u00b7 TAB swap keyset \u00b7 ESC", :ported "examples/core/core_input_actions.c"}
+ {:name "input-box", :category "text", :desc "A hover-to-type text input box", :controls "hover + type \u00b7 BACKSPACE delete \u00b7 Q (outside box) quit", :ported "examples/text/text_input_box.c"}
+ {:name "input-gamepad", :category "core", :desc "A live controller diagram: buttons/sticks/triggers lit", :controls "plug in a gamepad, LEFT/RIGHT switch slot, click VIBRATE, ESC", :ported "examples/core/core_input_gamepad.c"}
+ {:name "input-gestures", :category "core", :desc "Log detected mouse/touch gestures", :controls "tap/drag/swipe in the area \u00b7 Q quit", :ported "examples/core/core_input_gestures.c"}
+ {:name "input-gestures-testbed", :category "core", :desc "A gesture dashboard with log, indicators and protractor", :controls "tap/drag/swipe with the mouse, click Hide buttons, ESC", :ported "examples/core/core_input_gestures_testbed.c"}
+ {:name "input-keys", :category "core", :desc "Steer a ball with the arrow keys", :controls "ARROWS \u00b7 Q quit", :ported "examples/core/core_input_keys.c"}
+ {:name "input-mouse", :category "core", :desc "A ball follows the mouse; click to recolor", :controls "mouse \u00b7 LEFT/MIDDLE/RIGHT \u00b7 Q", :ported "examples/core/core_input_mouse.c"}
+ {:name "input-mouse-wheel", :category "core", :desc "Scroll a box with the mouse wheel", :controls "WHEEL \u00b7 Q quit", :ported "examples/core/core_input_mouse_wheel.c"}
+ {:name "input-multitouch", :category "core", :desc "A ball at every active touch/mouse point", :controls "touch/click \u00b7 Q quit", :ported "examples/core/core_input_multitouch.c"}
+ {:name "input-virtual-controls", :category "core", :desc "An on-screen D-pad moving a player circle", :controls "hold LEFT on a button \u00b7 Q quit", :ported "examples/core/core_input_virtual_controls.c"}
+ {:name "julia-set", :category "shaders", :desc "A Julia set fractal computed in a fragment shader", :controls "mouse zoom/drift, 1-6 presets, LEFT/RIGHT speed, SPACE, R, F1, ESC", :ported "examples/shaders/shaders_julia_set.c"}
+ {:name "kaleidoscope", :category "shapes", :desc "Draw strokes mirrored with 6-fold symmetry", :controls "LEFT mouse draw \u00b7 L/R history \u00b7 R reset \u00b7 Q quit", :ported "examples/shapes/shapes_kaleidoscope.c"}
+ {:name "keyboard-testbed", :category "core", :desc "An on-screen ENG-US keyboard highlighting held keys", :controls "hold any keys, mouse hover; close window to quit", :ported "examples/core/core_keyboard_testbed.c"}
+ {:name "lightmap-rendering", :category "shaders", :desc "A plane lit by a baked lightmap through a second UV channel", :controls "ESC", :ported "examples/shaders/shaders_lightmap_rendering.c"}
+ {:name "lines-bezier", :category "shapes", :desc "Drag endpoints to reshape a Bezier curve", :controls "drag endpoints \u00b7 Q quit", :ported "examples/shapes/shapes_lines_bezier.c"}
+ {:name "lines-drawing", :category "shapes", :desc "A paint canvas (RenderTexture)", :controls "LEFT paint \u00b7 RIGHT erase \u00b7 MIDDLE clear \u00b7 WHEEL size \u00b7 Q", :ported "examples/shapes/shapes_lines_drawing.c"}
+ {:name "loading-gltf", :category "models", :desc "The animated glTF robot, switchable animations", :controls "LEFT/RIGHT animation, ESC", :ported "examples/models/models_loading_gltf.c"}
+ {:name "loading-iqm", :category "models", :desc "The classic IQM guy walking on loop", :controls "ESC", :ported "examples/models/models_loading_iqm.c"}
+ {:name "loading-m3d", :category "models", :desc "The Cesium Man in Model3D format, skeleton view on SPACE", :controls "LEFT/RIGHT animation, hold SPACE skeleton, ESC", :ported "examples/models/models_loading_m3d.c"}
+ {:name "loading-vox", :category "models", :desc "Four MagicaVoxel models under a fly camera + voxel lighting", :controls "CLICK cycle, WASD/ARROWS move, MIDDLE-drag rotate, WHEEL zoom, ESC", :ported "examples/models/models_loading_vox.c"}
+ {:name "logo-anim", :category "shapes", :desc "The raylib logo assembling itself", :controls "R replay \u00b7 Q quit", :ported "examples/shapes/shapes_logo_raylib_anim.c"}
+ {:name "logo-raylib", :category "shapes", :desc "The raylib logo from rectangles + text", :controls "Q quit", :ported "examples/shapes/shapes_logo_raylib.c"}
+ {:name "logo-texture", :category "textures", :desc "The raylib logo loaded from a PNG file", :controls "Q quit", :ported "examples/textures/textures_logo_raylib.c"}
+ {:name "magnifying-glass", :category "textures", :desc "A circular magnifier revealing hidden bunnies", :controls "move mouse \u00b7 Q quit", :ported "examples/textures/textures_magnifying_glass.c"}
+ {:name "mandelbrot-set", :category "shaders", :desc "The Mandelbrot set in a shader, deep-zoom presets", :controls "mouse zoom/drift, 1-6 presets, UP/DOWN iterations, R, F1, ESC", :ported "examples/shaders/shaders_mandelbrot_set.c"}
+ {:name "math-angle-rotation", :category "shapes", :desc "Fixed-angle lines + a spinning line", :controls "Q quit", :ported "examples/shapes/shapes_math_angle_rotation.c"}
+ {:name "math-sine-cosine", :category "shapes", :desc "A live unit-circle trig visualization", :controls "SPACE pause \u00b7 L/R scrub angle \u00b7 Q quit", :ported "examples/shapes/shapes_math_sine_cosine.c"}
+ {:name "mesh-generation", :category "models", :desc "All nine procedural mesh generators, checked-textured", :controls "CLICK or LEFT/RIGHT cycle, ESC", :ported "examples/models/models_mesh_generation.c"}
+ {:name "mesh-instancing", :category "shaders", :desc "Ten thousand lit cubes in one draw call (DrawMeshInstanced)", :controls "ESC", :ported "examples/shaders/shaders_mesh_instancing.c"}
+ {:name "mesh-picking", :category "models", :desc "A mouse ray picks the closest quad/sphere/box/mesh", :controls "mouse aim, RIGHT CLICK camera, ESC", :ported "examples/models/models_mesh_picking.c"}
+ {:name "mixed-processor", :category "audio", :desc "A DSP distortion callback on the whole audio mix", :controls "LEFT/RIGHT distortion, SPACE coin, ESC", :ported "examples/audio/audio_mixed_processor.c"}
+ {:name "model-loading", :category "models", :desc "The castle OBJ model loaded from disk, ray-pick selection", :controls "LEFT CLICK select, ESC", :ported "examples/models/models_loading.c"}
+ {:name "model-shader", :category "shaders", :desc "The watermill OBJ drawn grayscale by a material shader", :controls "WASD + mouse look, ESC", :ported "examples/shaders/shaders_model_shader.c"}
+ {:name "module-playing", :category "audio", :desc "A chiptune XM module + pulsing circle waves", :controls "SPACE restart \u00b7 P pause \u00b7 U/D pitch \u00b7 Q quit", :ported "examples/audio/audio_module_playing.c"}
+ {:name "monitor-detector", :category "core", :desc "A scaled map of every attached monitor with its specs", :controls "ENTER next monitor \u00b7 ESC", :ported "examples/core/core_monitor_detector.c"}
+ {:name "mouse-painting", :category "textures", :desc "A paint program on a RenderTexture canvas", :controls "LEFT paint \u00b7 RIGHT erase \u00b7 WHEEL brush \u00b7 C clear \u00b7 S save \u00b7 Q", :ported "examples/textures/textures_mouse_painting.c"}
+ {:name "mouse-trail", :category "shapes", :desc "A fading trail follows the cursor", :controls "move the mouse \u00b7 Q quit", :ported "examples/shapes/shapes_mouse_trail.c"}
+ {:name "multi-sample2d", :category "shaders", :desc "Two textures blended in a shader via a second sampler2D", :controls "LEFT/RIGHT divider, ESC", :ported "examples/shaders/shaders_multi_sample2d.c"}
+ {:name "music-stream", :category "audio", :desc "Stream an MP3 with pan/volume/progress controls", :controls "SPACE restart \u00b7 P pause \u00b7 L/R pan \u00b7 U/D volume \u00b7 Q", :ported "examples/audio/audio_music_stream.c"}
+ {:name "normalmap-rendering", :category "shaders", :desc "A spinning plane lit through a tangent-space normal map", :controls "N toggle, WASD light, UP/DOWN shininess, ESC", :ported "examples/shaders/shaders_normalmap_rendering.c"}
+ {:name "npatch-drawing", :category "textures", :desc "Stretchable 9-patch / 3-patch UI panels", :controls "move mouse \u00b7 Q quit", :ported "examples/textures/textures_npatch_drawing.c"}
+ {:name "opaque-boxes", :category "interop", :desc "Native Colors carried across fns in opaque boxes", :controls "SPACE cycles \u00b7 Q quit", :ported nil}
+ {:name "orthographic-projection", :category "models", :desc "Toggle perspective vs orthographic camera", :controls "SPACE toggle \u00b7 Q quit", :ported "examples/models/models_orthographic_projection.c"}
+ {:name "palette-switch", :category "shaders", :desc "Palette-indexed bands recolored by a shader uniform", :controls "LEFT/RIGHT palette, ESC", :ported "examples/shaders/shaders_palette_switch.c"}
+ {:name "particles", :category "shapes", :desc "Water / smoke / fire particle effects", :controls "mouse \u00b7 LEFT/RIGHT type \u00b7 Q", :ported "examples/shapes/shapes_simple_particles.c"}
+ {:name "particles-blending", :category "textures", :desc "Spark particles trail the mouse (alpha/additive)", :controls "SPACE blending \u00b7 Q quit", :ported "examples/textures/textures_particles_blending.c"}
+ {:name "penrose-tile", :category "shapes", :desc "A Penrose tiling grown with an L-system", :controls "UP/DOWN generations \u00b7 Q quit", :ported "examples/shapes/shapes_penrose_tile.c"}
+ {:name "picking-3d", :category "core", :desc "Click a 3D box to pick it with a world-space ray", :controls "LEFT click box \u00b7 Q quit", :ported "examples/core/core_3d_picking.c"}
+ {:name "pie-chart", :category "shapes", :desc "An interactive pie chart with hover pop", :controls "hover \u00b7 Z/X slices \u00b7 N/M select \u00b7 L/R value \u00b7 V/P/D toggles \u00b7 A/S hole \u00b7 Q", :ported "examples/shapes/shapes_pie_chart.c"}
+ {:name "point-rendering", :category "models", :desc "Up to 10 million points: GPU point mode vs per-point draws", :controls "UP/DOWN count, SPACE method, ESC", :ported "examples/models/models_point_rendering.c"}
+ {:name "polygon-drawing", :category "textures", :desc "A cat texture mapped onto a spinning polygon", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_polygon_drawing.c"}
+ {:name "postprocessing", :category "shaders", :desc "Twelve full-screen post-process shaders, cycled", :controls "LEFT/RIGHT cycle effect, ESC", :ported "examples/shaders/shaders_postprocessing.c"}
+ {:name "random-sequence", :category "core", :desc "Colored bars in a no-repeat LoadRandomSequence", :controls "SPACE shuffle, UP/DOWN count, ESC", :ported "examples/core/core_random_sequence.c"}
+ {:name "random-values", :category "core", :desc "A new random value every two seconds", :controls "Q quit", :ported "examples/core/core_random_values.c"}
+ {:name "raw-data", :category "textures", :desc "A .raw pixel dump + a code-generated checkerboard", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_raw_data.c"}
+ {:name "raw-stream", :category "audio", :desc "A sine wave generated sample-by-sample into a stream", :controls "UP/DOWN frequency, LEFT/RIGHT pan, ESC", :ported "examples/audio/audio_raw_stream.c"}
+ {:name "raymarching", :category "shaders", :desc "A raymarched SDF scene with a first-person fly-cam", :controls "WASD move, mouse look, Q/E down/up, ESC", :ported "examples/shaders/shaders_raymarching_rendering.c"}
+ {:name "rectangle-advanced", :category "shapes", :desc "Rounded gradient rectangles via rlgl", :controls "Q quit", :ported "examples/shapes/shapes_rectangle_advanced.c"}
+ {:name "rectangle-bounds", :category "text", :desc "Word-wrapped text in a mouse-resizable container", :controls "drag corner to resize, SPACE toggle wrap, ESC", :ported "examples/text/text_rectangle_bounds.c"}
+ {:name "rectangle-scaling", :category "shapes", :desc "Resize a rectangle by its corner", :controls "drag corner \u00b7 Q quit", :ported "examples/shapes/shapes_rectangle_scaling.c"}
+ {:name "recursive-tree", :category "shapes", :desc "A binary fractal tree with live knobs", :controls "L/R angle \u00b7 U/D length \u00b7 A/S decay \u00b7 Z/X depth \u00b7 T/Y thick \u00b7 B bezier \u00b7 Q", :ported "examples/shapes/shapes_recursive_tree.c"}
+ {:name "render-texture", :category "core", :desc "A ball bouncing inside a rotated off-screen render texture", :controls "ESC", :ported "examples/core/core_render_texture.c"}
+ {:name "ring-drawing", :category "shapes", :desc "A ring/annulus with adjustable angles", :controls "L/R + U/D angles \u00b7 A/S Z/X radii \u00b7 O/P segments \u00b7 R/L/C toggles \u00b7 Q", :ported "examples/shapes/shapes_ring_drawing.c"}
+ {:name "rlgl-color-wheel", :category "shapes", :desc "An HSV color picker wheel via rlgl", :controls "click/drag pick \u00b7 WHEEL count \u00b7 U/D size \u00b7 A/S value \u00b7 SPACE wires \u00b7 CTRL+C \u00b7 Q", :ported "examples/shapes/shapes_rlgl_color_wheel.c"}
+ {:name "rlgl-compute", :category "shaders", :desc "Game of Life stepped entirely on the GPU by compute shaders", :controls "LEFT draw, RIGHT erase, WHEEL brush, ESC", :ported "examples/shaders/shaders_rlgl_compute.c"}
+ {:name "rlgl-solar-system", :category "models", :desc "Sun/Earth/Moon via the rlgl matrix stack", :controls "watch \u00b7 Q quit", :ported "examples/models/models_rlgl_solar_system.c"}
+ {:name "rlgl-triangle", :category "shapes", :desc "A rainbow triangle via rlgl immediate mode", :controls "drag corners \u00b7 SPACE lines \u00b7 L/R culling \u00b7 R reset \u00b7 Q", :ported "examples/shapes/shapes_rlgl_triangle.c"}
+ {:name "rotating-cube", :category "models", :desc "A textured cube spinning on a tilted axis (rlgl)", :controls "ESC", :ported "examples/models/models_rotating_cube.c"}
+ {:name "rounded-rectangle", :category "shapes", :desc "A rounded rectangle, size/roundness knobs", :controls "A/S Z/X size \u00b7 L/R roundness \u00b7 U/D thickness \u00b7 O/P segments \u00b7 R/L/G \u00b7 Q", :ported "examples/shapes/shapes_rounded_rectangle_drawing.c"}
+ {:name "rounded-rectangle-shader", :category "shaders", :desc "SDF rounded rects (fill/shadow/border) in a shader", :controls "Q/ESC quit", :ported "examples/shaders/shaders_rounded_rectangle.c"}
+ {:name "scissor-test", :category "core", :desc "A scissor rectangle reveals text", :controls "mouse \u00b7 S toggle \u00b7 Q quit", :ported "examples/core/core_scissor_test.c"}
+ {:name "screen-buffer", :category "textures", :desc "The classic DOS fire effect in a palette-indexed buffer", :controls "ESC", :ported "examples/textures/textures_screen_buffer.c"}
+ {:name "screen-recording", :category "core", :desc "Record the window to an animated GIF", :controls "CTRL+R start/stop, Q", :ported "examples/core/core_screen_recording.c"}
+ {:name "shadowmap-rendering", :category "shaders", :desc "Real shadows: an animated robot under a shadowmap", :controls "ARROWS light, F screenshot, ESC", :ported "examples/shaders/shaders_shadowmap_rendering.c"}
+ {:name "shapes-textures-shader", :category "shaders", :desc "A grayscale fragment shader over shapes + a sprite", :controls "ESC", :ported "examples/shaders/shaders_shapes_textures.c"}
+ {:name "simple-mask", :category "shaders", :desc "An animated mask eats holes in two models' skin", :controls "WASD + mouse look, ESC", :ported "examples/shaders/shaders_simple_mask.c"}
+ {:name "skybox-rendering", :category "models", :desc "A cubemap skybox drawn from inside a unit cube", :controls "WASD + mouse look, ESC", :ported "examples/models/models_skybox_rendering.c"}
+ {:name "smooth-pixelperfect", :category "core", :desc "Sub-pixel smoothing of upscaled pixel art", :controls "S smooth \u00b7 O overscan \u00b7 Q quit", :ported "examples/core/core_smooth_pixelperfect.c"}
+ {:name "sound-loading", :category "audio", :desc "Play a WAV and an OGG sound", :controls "SPACE wav \u00b7 ENTER ogg \u00b7 Q quit", :ported "examples/audio/audio_sound_loading.c"}
+ {:name "sound-multi", :category "audio", :desc "Overlapping sound playback via sound aliases", :controls "SPACE play (rapid = overlap) \u00b7 Q quit", :ported "examples/audio/audio_sound_multi.c"}
+ {:name "sound-positioning", :category "audio", :desc "Spatial audio around an orbiting 3D sphere", :controls "listen! \u00b7 Q quit", :ported "examples/audio/audio_sound_positioning.c"}
+ {:name "spectrum-visualizer", :category "audio", :desc "A live FFT spectrum of the music through a shader", :controls "ESC", :ported "examples/audio/audio_spectrum_visualizer.c"}
+ {:name "splines-drawing", :category "shapes", :desc "Draggable spline points, 4 spline types", :controls "1-4 type \u00b7 LEFT drag \u00b7 RIGHT add \u00b7 A/S thickness \u00b7 H helpers \u00b7 Q", :ported "examples/shapes/shapes_splines_drawing.c"}
+ {:name "spotlight-rendering", :category "shaders", :desc "Three spotlights alpha-masked over a sprite swarm", :controls "move the mouse, ESC", :ported "examples/shaders/shaders_spotlight_rendering.c"}
+ {:name "sprite-animation", :category "textures", :desc "Scarfy runs: 6-frame spritesheet animation", :controls "L/R animation speed \u00b7 Q quit", :ported "examples/textures/textures_sprite_animation.c"}
+ {:name "sprite-button", :category "textures", :desc "A 3-state sprite button with a click sound", :controls "click the button \u00b7 Q quit", :ported "examples/textures/textures_sprite_button.c"}
+ {:name "sprite-explosion", :category "textures", :desc "Click to play a 5x5 explosion spritesheet + sound", :controls "LEFT click \u00b7 Q quit", :ported "examples/textures/textures_sprite_explosion.c"}
+ {:name "sprite-fonts", :category "text", :desc "A gallery of raylib's eight bundled sprite fonts", :controls "watch \u00b7 Q quit", :ported "examples/text/text_sprite_fonts.c"}
+ {:name "sprite-stacking", :category "textures", :desc "A voxel booth from 122 stacked rotated slices", :controls "A/D spin \u00b7 WHEEL separation \u00b7 Q quit", :ported "examples/textures/textures_sprite_stacking.c"}
+ {:name "srcrec-dstrec", :category "textures", :desc "Rotate + scale a sprite frame (DrawTexturePro)", :controls "Q quit", :ported "examples/textures/textures_srcrec_dstrec.c"}
+ {:name "starfield", :category "shapes", :desc "A perspective starfield flying at you", :controls "MOUSE WHEEL \u00b7 SPACE mode \u00b7 Q", :ported "examples/shapes/shapes_starfield_effect.c"}
+ {:name "storage-values", :category "core", :desc "Save/load a score pair to a binary storage file", :controls "R random, ENTER save, SPACE load, ESC", :ported "examples/core/core_storage_values.c"}
+ {:name "stream-callback", :category "audio", :desc "A pull-model synth: sine/square/triangle/sawtooth on demand", :controls "LEFT/RIGHT wave, UP/DOWN frequency, ESC", :ported "examples/audio/audio_stream_callback.c"}
+ {:name "stream-effects", :category "audio", :desc "Stackable lowpass + delay effects on one music stream", :controls "F lowpass, D delay, SPACE restart, P pause, ESC", :ported "examples/audio/audio_stream_effects.c"}
+ {:name "strings-management", :category "text", :desc "Drag/slice/shatter/glue text; 1-6 run TextTo* fns", :controls "L-mouse grab/throw, R-mouse slice (+Shift shatter), M-mouse shake, L-Ctrl glue, 1-6 reset, ESC", :ported "examples/text/text_strings_management.c"}
+ {:name "tesseract-view", :category "models", :desc "A rotating 4D hypercube projected to 3D", :controls "watch \u00b7 Q quit", :ported "examples/models/models_tesseract_view.c"}
+ {:name "text-3d-drawing", :category "text", :desc "A bitmap font as textured quads in 3D, one span waving", :controls "F1/F2 boundaries, F3 camera, arrows size/spacing, Home/End layers, Tab multicolor, click cube, ESC", :ported "examples/text/text_3d_drawing.c"}
+ {:name "text-file-loading", :category "core", :desc "Load + word-wrap a text file, scroll it", :controls "mouse wheel scroll, ESC", :ported "examples/core/core_text_file_loading.c"}
+ {:name "texture-outline", :category "shaders", :desc "A shader-drawn outline around a sprite", :controls "mouse wheel outline size, ESC", :ported "examples/shaders/shaders_texture_outline.c"}
+ {:name "texture-rendering", :category "shaders", :desc "A blank texture painted entirely by a fragment shader", :controls "ESC", :ported "examples/shaders/shaders_texture_rendering.c"}
+ {:name "texture-tiling", :category "shaders", :desc "A cube model with its texture tiled 3x3 by a shader", :controls "WASD + mouse look, Z retarget, ESC", :ported "examples/shaders/shaders_texture_tiling.c"}
+ {:name "texture-waves", :category "shaders", :desc "A space texture rippled by an animated wave shader", :controls "ESC", :ported "examples/shaders/shaders_texture_waves.c"}
+ {:name "textured-cube", :category "models", :desc "Two rlgl textured 3D cubes from a shared atlas", :controls "ESC", :ported "examples/models/models_textured_cube.c"}
+ {:name "textured-curve", :category "textures", :desc "A road texture swept along a draggable Bezier", :controls "drag points \u00b7 SPACE curve \u00b7 +/- width \u00b7 L/R segments \u00b7 Q", :ported "examples/textures/textures_textured_curve.c"}
+ {:name "tiled-drawing", :category "textures", :desc "Tile a texture pattern with scale/rotation/color", :controls "click pattern/color \u00b7 UP/DOWN scale \u00b7 L/R rotation \u00b7 SPACE reset \u00b7 Q", :ported "examples/textures/textures_tiled_drawing.c"}
+ {:name "to-image", :category "textures", :desc "Round-trip an image VRAM<->RAM (LoadImageFromTexture)", :controls "watch \u00b7 Q quit", :ported "examples/textures/textures_to_image.c"}
+ {:name "top-down-lights", :category "shapes", :desc "2D lights casting shadow volumes off boxes", :controls "drag light 1 \u00b7 RIGHT add light \u00b7 L debug view \u00b7 Q quit", :ported "examples/shapes/shapes_top_down_lights.c"}
+ {:name "triangle-strip", :category "shapes", :desc "A rainbow triangle-strip fan", :controls "L/R segments \u00b7 O outline \u00b7 Q quit", :ported "examples/shapes/shapes_triangle_strip.c"}
+ {:name "undo-redo", :category "core", :desc "A grid player with a 26-slot undo/redo ring buffer", :controls "ARROWS move, SPACE color, CTRL+Z/Y undo/redo, ESC", :ported "examples/core/core_undo_redo.c"}
+ {:name "unicode-emojis", :category "text", :desc "Click emojis for multilingual speech bubbles", :controls "hover + click emojis, SPACE re-roll, ESC", :ported "examples/text/text_unicode_emojis.c"}
+ {:name "unicode-ranges", :category "text", :desc "Grow a multilingual font atlas by unicode range", :controls "0-4 select range set, ESC", :ported "examples/text/text_unicode_ranges.c"}
+ {:name "vector-angle", :category "shapes", :desc "Two ways to measure an angle", :controls "mouse \u00b7 SPACE mode \u00b7 RIGHT move \u00b7 Q", :ported "examples/shapes/shapes_vector_angle.c"}
+ {:name "vertex-displacement", :category "shaders", :desc "A plane mesh riding Perlin-noise waves in the vertex shader", :controls "WASD + mouse look, ESC", :ported "examples/shaders/shaders_vertex_displacement.c"}
+ {:name "viewport-scaling", :category "core", :desc "A fixed game resolution scaled into a resizable window", :controls "resize window, click < > buttons, ESC", :ported "examples/core/core_viewport_scaling.c"}
+ {:name "vr-simulator", :category "core", :desc "A 3D scene in stereo through a simulated Oculus Rift", :controls "mouse look (first-person), ESC", :ported "examples/core/core_vr_simulator.c"}
+ {:name "waving-cubes", :category "models", :desc "3375 rainbow cubes waving in 3D", :controls "watch \u00b7 Q quit", :ported "examples/models/models_waving_cubes.c"}
+ {:name "window-flags", :category "core", :desc "Toggle window state flags live with a bouncing ball", :controls "F/R/D/H/N/M/U/T/A/V/B toggle flags \u00b7 ESC", :ported "examples/core/core_window_flags.c"}
+ {:name "window-letterbox", :category "core", :desc "A fixed 640x480 game letterboxed on resize", :controls "resize the window \u00b7 SPACE recolor \u00b7 Q quit", :ported "examples/core/core_window_letterbox.c"}
+ {:name "window-should-close", :category "core", :desc "Confirm-before-exit on window close", :controls "ESC/X then Y/N \u00b7 Q", :ported "examples/core/core_window_should_close.c"}
+ {:name "words-alignment", :category "text", :desc "Align a word inside a rectangle", :controls "L/R h-align \u00b7 U/D v-align \u00b7 Q quit", :ported "examples/text/text_words_alignment.c"}
+ {:name "world-screen", :category "core", :desc "A 2D label tracking a 3D cube (GetWorldToScreen)", :controls "watch \u00b7 Q quit", :ported "examples/core/core_world_screen.c"}
+ {:name "writing-anim", :category "text", :desc "A message types itself out", :controls "SPACE speed up \u00b7 ENTER restart \u00b7 Q quit", :ported "examples/text/text_writing_anim.c"}
+ {:name "yaw-pitch-roll", :category "models", :desc "Fly a WWI plane through pitch/yaw/roll, easing level", :controls "UP/DOWN pitch, LEFT/RIGHT roll, A/S yaw, ESC", :ported "examples/models/models_yaw_pitch_roll.c"}]
