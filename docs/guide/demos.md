@@ -532,6 +532,7 @@ Two rlgl textured 3D cubes from a shared atlas. Controls: ESC. Run it with `bb t
 
 3375 rainbow cubes waving in 3D. Controls: watch · Q quit. Run it with `bb waving-cubes`.
 
+![waving-cubes](../demos/waving-cubes.gif)
 
 ### [yaw-pitch-roll](https://github.com/b12n-oss/raylib-jank-demo/tree/main/yaw-pitch-roll)
 
