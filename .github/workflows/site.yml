@@ -1,0 +1,69 @@
+name: Site
+
+# Builds the documentation site on every pull request, and publishes it to
+# GitHub Pages from main, at https://b12n-oss.github.io/raylib-jank-demo/.
+# The generator is jlt-commons/docs-engine, pinned by tag. This repo owns its
+# content under docs/, its config in docs/site.edn and the assertions in
+# docs/check-site.sh.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A half-applied Pages deployment is worse than a slightly stale one, so main is
+# never cancelled. Pull request builds cancel their own earlier runs.
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  DOCS_ENGINE_REF: v0.4.2
+  BASE_PATH: /raylib-jank-demo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check out the docs engine
+        uses: actions/checkout@v7
+        with:
+          repository: jlt-commons/docs-engine
+          ref: ${{ env.DOCS_ENGINE_REF }}
+          path: .docs-engine
+
+      - name: Install jolt
+        uses: jlt-commons/setup-jolt@v1
+
+      - name: Build
+        working-directory: .docs-engine
+        run: jolt run build "$GITHUB_WORKSPACE"
+
+      - name: Check the build
+        run: bash docs/check-site.sh
+
+      - name: Upload the Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -8,6 +8,9 @@ C++ interop explains how they're written. raylib itself comes from the
 official [`org.jank-lang.commons/raylib-sys`](https://github.com/jank-lang/commons)
 package.
 
+The gallery of every demo is at
+<https://b12n-oss.github.io/raylib-jank-demo/>.
+
 You need Leiningen, a working jank, babashka for the tasks, and git (for the
 asset submodule). The demos are macOS-first; `--disable-sandbox` is on every run
 because macOS has no `bwrap`.
@@ -38,6 +41,7 @@ docs/                         the site: site.edn, guide/index.md, the generated
 scripts/                      gen.clj, check.clj, sync_recordings.clj and the
                               screen-grab manifest for `bb record`
 .clj-kondo/                   lint config that teaches clj-kondo about jank
+.github/workflows/            ci.yml (bb check, bb lint), site.yml (Pages)
 ```
 
 Each demo's namespace is `net.b12n.raylib-jnk.scenes.<demo>`, matching its
@@ -93,6 +97,9 @@ jank can't be compiled in a per-PR job (building it means building Clang), so
   the gallery agree
 - `bb sync-recordings --check`: each demo's recording matches the site's copy
 
+CI runs `bb check` and `bb lint` on every push and pull request. It compiles
+nothing, for the reason above.
+
 `bb lint` runs clj-kondo over every `.jank` source, passing them by name
 because clj-kondo skips `.jank` files when given a directory. It reports 0
 warnings today.
@@ -119,7 +126,9 @@ at 4.1.
 ## The site
 
 `docs/` builds with [docs-engine](https://github.com/jlt-commons/docs-engine)
-into a gallery of every demo:
+into a gallery of every demo. `site.yml` builds it on every push and pull
+request, runs `docs/check-site.sh`, and deploys to GitHub Pages from main. To
+build it locally:
 
 ```sh
 (cd ../docs-engine && jolt run build ../raylib-jank-demo)

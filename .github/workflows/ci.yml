@@ -1,0 +1,42 @@
+name: CI
+
+# ---------------------------------------------------------------------------
+# Runs on pull requests and pushes to main, plus manual dispatch.
+#
+# This is the offline gate only. Compiling a demo needs a working jank, and
+# building jank means building Clang, far beyond a per-PR job. bb check covers
+# what fails before the compiler would: every .jank source reads to EOF, the
+# tooling EDN parses, the generated files match demos.edn, and each demo's
+# recording matches the site's copy. bb lint runs clj-kondo over every .jank
+# source. Neither touches the raylib asset submodule, so it isn't checked out.
+# ---------------------------------------------------------------------------
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    name: check · lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: DeLaGuardo/setup-clojure@13
+        with:
+          bb: latest
+          clj-kondo: latest
+
+      - name: Offline gates
+        run: bb check
+
+      # Errors fail; warnings are reported.
+      - name: clj-kondo
+        run: bb lint
