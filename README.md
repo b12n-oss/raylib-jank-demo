@@ -33,7 +33,7 @@ jank-raylib-sys/raylib        git submodule: raylib 6.0, kept only for the
   bb.edn                      a `run` task
   src/net/b12n/raylib_jnk/scenes/<demo>.jank
   docs/guide/index.md         what it shows, its controls, where it was ported from
-  docs/demos/<demo>.gif       its recording (211 of the 213 have one)
+  docs/demos/<demo>.gif       its recording (212 of the 213 have one)
 target/                       the shared build cache every demo writes to (ignored)
 docs/                         the site: site.edn, guide/index.md, the generated
                               guide/demos.md gallery, and a second copy of every
