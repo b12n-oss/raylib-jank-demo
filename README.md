@@ -76,7 +76,7 @@ A demo always runs from its own directory, because the ones that load assets
 reach them as `../jank-raylib-sys/raylib/examples/...`. The tasks fetch the
 submodule if it's missing.
 
-**Which jank runs.** lein-jank calls the first `jank` on your PATH. Set
+lein-jank calls the first `jank` on your PATH. Set
 `JANK=/path/to/jank` to choose another, and `LEIN=/path/to/lein` likewise for
 Leiningen. A source-built jank stops working when Homebrew upgrades the LLVM
 it was linked against, and `bb doctor` says so. Homebrew's own jank
@@ -138,5 +138,5 @@ BASE_PATH=/raylib-jank-demo bash docs/check-site.sh
 ## License
 
 EPL 2.0, inherited from raylib-jnk. See `LICENSE`. The demos are ports of
-raylib's examples, which are zlib, and `NOTICE` carries those terms along with
+raylib's examples, which are zlib, and `NOTICE` has those terms along with
 the rest of the project's history.

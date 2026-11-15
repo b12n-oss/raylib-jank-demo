@@ -1,6 +1,6 @@
 # Examples
 
-Animated GIF previews of every example. Recorded with a capture CLI that is not publicly released, so `bb record` is maintainer-only - every GIF here is committed.
+Animated GIF previews of every example. Recorded with a capture CLI that is not publicly released, so `bb record` is maintainer-only, and every GIF here is committed.
 
 ## core: window, input, cameras, files
 

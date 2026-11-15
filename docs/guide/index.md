@@ -47,4 +47,4 @@ which keeps the guide to jank's C++ interop that explains how they're written.
 All but one are ports of raylib's own example programs, and each demo's page
 names the original. The
 [NOTICE](https://github.com/b12n-oss/raylib-jank-demo/blob/main/NOTICE) file
-carries the licence terms.
+has the licence terms.
